@@ -5,6 +5,7 @@ import android.databinding.DataBindingUtil;
 import android.view.View;
 import android.view.ViewGroup;
 
+import cn.bmob.v3.BmobUser;
 import lins.aaa.R;
 import lins.aaa.databinding.ActivitySettingBinding;
 import lins.aaa.ui.login.LoginActivity;
@@ -85,6 +86,9 @@ public class SettingActivity extends BaseActivity{
 //                RongIM.getInstance().logout();//退出融云IM
 //                App.clearShareData();//无效？
 //                App.setSharedData(Config.IS_AUTO_LOGIN, "");
+
+
+                BmobUser.logOut();
                 Intent intent = new Intent(SettingActivity.this, LoginActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);

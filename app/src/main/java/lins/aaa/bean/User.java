@@ -19,7 +19,9 @@ public class User extends BmobUser{
     String icon_pic;
 
     public User(){}
+    public User(String name,String pwd){
 
+    }
     public User(String name, String sex, String age, String city, String note, String icon_pic) {
         this.name = name;
         this.sex = sex;

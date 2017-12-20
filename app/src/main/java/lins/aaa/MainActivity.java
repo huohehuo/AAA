@@ -22,11 +22,7 @@ import android.widget.TextView;
 
 import java.lang.reflect.Field;
 
-import cn.bmob.v3.BmobUser;
-import cn.bmob.v3.exception.BmobException;
-import cn.bmob.v3.listener.LogInListener;
 import lins.aaa.adapter.MainPagerAdapter;
-import lins.aaa.bean.User;
 import lins.aaa.databinding.ActivityMainBinding;
 import lins.aaa.ui.BaseActivity;
 import lins.aaa.ui.fragment.HomeFragment;
@@ -156,16 +152,7 @@ public class MainActivity extends BaseActivity {
 //                }
 //            }
 //        });
-        BmobUser.loginByAccount("ww", "ww", new LogInListener<User>() {
-            @Override
-            public void done(User user, BmobException e) {
-                if (e==null){
-                    App.e("登录成功");
-                }else{
-                    App.e("失败。。。。"+e.toString());
-                }
-            }
-        });
+
     }
 
     @Override

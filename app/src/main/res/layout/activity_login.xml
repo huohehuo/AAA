@@ -10,7 +10,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="70dp"
+            android:paddingTop="90dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -23,6 +23,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="地之名"
+                    android:textStyle="bold"
                     android:textColor="#181717"
                     android:textSize="38sp" />
 
@@ -35,8 +36,11 @@
                     android:textSize="30sp" />
             </LinearLayout>
             <include
-                android:id="@+id/layout_login"
                 android:visibility="gone"
+                android:layout_marginTop="140dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/layout_login"
                 layout="@layout/chip_login"/>
         </LinearLayout>
 
@@ -45,12 +49,9 @@
             android:id="@+id/iv_login"
             android:layout_width="66dp"
             android:layout_height="66dp"
-            android:layout_above="@+id/imageView"
-            android:layout_alignEnd="@+id/imageView"
-            android:layout_alignRight="@+id/imageView"
-            android:layout_marginBottom="75dp"
-            android:layout_marginEnd="65dp"
-            android:layout_marginRight="65dp"
+            android:layout_above="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="37dp"
             android:src="@drawable/btn_login" />
 
         <TextView
@@ -62,7 +63,8 @@
             android:layout_marginBottom="11dp"
             android:text="注册->"
             android:textColor="#000"
-            android:textSize="26dp" />
+            android:textSize="23dp"
+            android:id="@+id/textView" />
 
         <ImageView
             android:id="@+id/imageView"

@@ -66,9 +66,33 @@
         }
       ],
       "relations": []
+    },
+    {
+      "id": "4:8533848565252752380",
+      "lastPropertyId": "4:140857032328051207",
+      "name": "AdressBean",
+      "properties": [
+        {
+          "id": "1:4559088363048923092",
+          "name": "id"
+        },
+        {
+          "id": "2:7790710916203105796",
+          "name": "adress_name"
+        },
+        {
+          "id": "3:2049870302997359318",
+          "name": "adress_pic"
+        },
+        {
+          "id": "4:140857032328051207",
+          "name": "adress_title"
+        }
+      ],
+      "relations": []
     }
   ],
-  "lastEntityId": "3:2409266407000257381",
+  "lastEntityId": "4:8533848565252752380",
   "lastIndexId": "0:0",
   "lastRelationId": "0:0",
   "lastSequenceId": "0:0",

@@ -99,7 +99,7 @@ public class LoginActivity extends BaseActivity {
         });
 
 
-//        startActivityWith(RegisterActivity.class, binding.btnRegis);
+        startActivityWith(RegisterActivity.class, binding.tvRg);
     }
 
     @Override

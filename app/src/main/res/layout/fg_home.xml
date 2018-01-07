@@ -9,10 +9,25 @@
             android:id="@+id/banner"
             android:layout_width="match_parent"
             android:layout_height="180dp" />
+        <com.jude.easyrecyclerview.EasyRecyclerView
+            android:id="@+id/ry_hot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/linearLayout"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:recyclerClipToPadding="true"
+            app:recyclerPaddingBottom="8dp"
+            app:recyclerPaddingTop="8dp"
+            app:scrollbarStyle="insideOverlay"
+            app:scrollbars="none" />
         <LinearLayout
+            android:layout_below="@+id/banner"
             android:layout_width="match_parent"
             android:layout_height="90dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout">
 
             <Button
                 android:id="@+id/btn1"
@@ -29,13 +44,14 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"/>
         </LinearLayout>
+
         <com.jude.easyrecyclerview.EasyRecyclerView
             android:id="@+id/ry_square"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/banner"
+            android:layout_below="@+id/ry_hot"
             android:foreground="?android:attr/selectableItemBackground"
             app:recyclerClipToPadding="true"
             app:recyclerPaddingBottom="8dp"

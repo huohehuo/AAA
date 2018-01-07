@@ -24,7 +24,9 @@ import java.util.List;
 import lins.aaa.App;
 import lins.aaa.R;
 import lins.aaa.adapter.GlideImageLoader;
+import lins.aaa.adapter.HotAdressAdapter;
 import lins.aaa.adapter.MainAdapter;
+import lins.aaa.bean.AdressBean;
 import lins.aaa.bean.PlaceBean;
 import lins.aaa.databinding.FgHomeBinding;
 import lins.aaa.ui.SysNotifyActivity;
@@ -38,6 +40,7 @@ public class HomeFragment extends Fragment {
     public static final String TAG = "three_fragment";
     FgHomeBinding binding;
     private MainAdapter adapter;
+    private HotAdressAdapter hotAdapter;
     private View rootView;
     private List<String> imagesList;
     @Nullable
@@ -47,8 +50,12 @@ public class HomeFragment extends Fragment {
         if (rootView == null){
             binding = DataBindingUtil.inflate(inflater, R.layout.fg_home,container,false);
             rootView = binding.getRoot();
+
             binding.rySquare.setAdapter(adapter = new MainAdapter(getActivity()));
             binding.rySquare.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+            binding.ryHot.setAdapter(hotAdapter = new HotAdressAdapter(getActivity()));
+            binding.ryHot.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
 
 
             binding.banner.setBannerStyle(BannerConfig.NUM_INDICATOR);
@@ -122,6 +129,17 @@ public class HomeFragment extends Fragment {
         list.add(new PlaceBean("钦州","海豚之乡","aaaa","1"));
         list.add(new PlaceBean("钦州","海豚之乡","aaaa","1"));
         adapter.addAll(list);
+
+        List<AdressBean> list1 = new ArrayList<>();
+        list1.add(new AdressBean("qinhou","http://bmob-cdn-14674.b0.upaiyun.com/2017/10/25/65600ac740e4bdea8018c806b2dc8b4a.jpg","haoahaoao"));
+        list1.add(new AdressBean("qinhou","http://bmob-cdn-14674.b0.upaiyun.com/2017/10/25/65600ac740e4bdea8018c806b2dc8b4a.jpg","haoahaoao"));
+        list1.add(new AdressBean("qinhou","http://bmob-cdn-14674.b0.upaiyun.com/2017/10/25/65600ac740e4bdea8018c806b2dc8b4a.jpg","haoahaoao"));
+        list1.add(new AdressBean("qinhou","http://bmob-cdn-14674.b0.upaiyun.com/2017/10/25/65600ac740e4bdea8018c806b2dc8b4a.jpg","haoahaoao"));
+        list1.add(new AdressBean("qinhou","http://bmob-cdn-14674.b0.upaiyun.com/2017/10/25/65600ac740e4bdea8018c806b2dc8b4a.jpg","haoahaoao"));
+        list1.add(new AdressBean("qinhou","http://bmob-cdn-14674.b0.upaiyun.com/2017/10/25/65600ac740e4bdea8018c806b2dc8b4a.jpg","haoahaoao"));
+        list1.add(new AdressBean("qinhou","http://bmob-cdn-14674.b0.upaiyun.com/2017/10/25/65600ac740e4bdea8018c806b2dc8b4a.jpg","haoahaoao"));
+        list1.add(new AdressBean("qinhou","http://bmob-cdn-14674.b0.upaiyun.com/2017/10/25/65600ac740e4bdea8018c806b2dc8b4a.jpg","haoahaoao"));
+        hotAdapter.addAll(list1);
 //        binding.rySquare.setRefreshing(true);
 //        User user = BmobUser.getCurrentUser(User.class);
 //        BmobQuery<PlanBean> query = new BmobQuery<>();

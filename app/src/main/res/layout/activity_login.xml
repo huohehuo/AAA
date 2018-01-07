@@ -35,23 +35,25 @@
                     android:textColor="#181717"
                     android:textSize="30sp" />
             </LinearLayout>
+        </LinearLayout>
             <include
                 android:visibility="gone"
-                android:layout_marginTop="140dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="20dp"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:id="@+id/layout_login"
                 layout="@layout/chip_login"/>
-        </LinearLayout>
 
 
         <ImageView
             android:id="@+id/iv_login"
             android:layout_width="66dp"
             android:layout_height="66dp"
-            android:layout_above="@+id/textView"
+            android:layout_above="@+id/tv_rg"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="37dp"
+            android:layout_marginBottom="70dp"
+            android:layout_alignParentBottom="true"
             android:src="@drawable/btn_login" />
 
         <TextView
@@ -61,10 +63,10 @@
             android:layout_alignEnd="@+id/imageView"
             android:layout_alignRight="@+id/imageView"
             android:layout_marginBottom="11dp"
-            android:text="注册->"
-            android:textColor="#000"
-            android:textSize="23dp"
-            android:id="@+id/textView" />
+            android:text="注册"
+            android:textColor="#c56b6b6b"
+            android:textSize="20dp"
+            android:id="@+id/tv_rg" />
 
         <ImageView
             android:id="@+id/imageView"

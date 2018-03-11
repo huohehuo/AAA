@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -48,8 +48,9 @@ public class MySayFragment extends Fragment {
             binding = DataBindingUtil.inflate(inflater, R.layout.fg_mysay, container, false);
             rootView = binding.getRoot();
             binding.rySquare.setAdapter(adapter = new PlanAdapter(getActivity()));
-            binding.rySquare.setLayoutManager(new LinearLayoutManager(getActivity()));
-
+//            binding.rySquare.setLayoutManager(new LinearLayoutManager(getActivity()));
+//            binding.rySquare.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
+            binding.rySquare.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
 
             getData();
             initEven();

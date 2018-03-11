@@ -20,6 +20,7 @@ import lins.aaa.adapter.MainAdapter;
 import lins.aaa.databinding.ActivityAboutMeBinding;
 import lins.aaa.ui.AddPlanActivity;
 import lins.aaa.ui.SettingActivity;
+import lins.aaa.utils.ACache;
 
 
 /**
@@ -33,6 +34,7 @@ public class MeFragment extends Fragment {
     private View rootView;
     private AppCompatActivity appCompatActivity;
     private ImageView iv_right,iv_left;
+    private ACache aCache;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -74,7 +76,7 @@ public class MeFragment extends Fragment {
 
     //获取数据
     protected void getData() {
-
+        aCache = ACache.get(getActivity());
     }
 
     private void setupViewPager(ViewPager mViewPager) {

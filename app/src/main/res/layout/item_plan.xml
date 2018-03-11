@@ -2,8 +2,7 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
-    android:orientation="vertical">
+    android:layout_margin="10dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,13 +14,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
         <ImageView
+            android:scaleType="fitXY"
             android:id="@+id/iv_main_bg"
-            android:minHeight="150dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         </LinearLayout>
         <View
             android:id="@+id/llll"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_width="match_parent"
             android:layout_height="0.6dp"
             android:layout_below="@+id/tv_main_essay"
@@ -33,6 +34,8 @@
             android:layout_below="@+id/llll">
 
             <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
                 android:id="@+id/tv_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -41,6 +44,8 @@
                 android:textSize="12sp" />
 
             <TextView
+                android:layout_centerVertical="true"
+
                 android:id="@+id/tv_favour"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
@@ -49,6 +54,8 @@
                 android:text="1人喜欢" />
 
             <ImageView
+                android:layout_centerVertical="true"
+
                 android:id="@+id/iv_favour"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

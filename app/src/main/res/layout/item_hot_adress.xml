@@ -12,7 +12,7 @@
             android:id="@+id/iv_hot"
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:src="@drawable/face_pass"
+            android:src="@drawable/icon"
             android:layout_centerVertical="true"
             android:layout_margin="20dp"/>
     </RelativeLayout>

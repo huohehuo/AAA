@@ -49,7 +49,8 @@ public class PlanAdapter extends RecyclerArrayAdapter<PlanBean> {
 
         private TextView time;
         private TextView eesay;
-        private ImageView favour,img_bg;
+        private ImageView img_bg;
+        private ImageView favour;
         private TextView num;
         public MainHolder(ViewGroup parent) {
             super(parent, R.layout.item_plan);

@@ -25,7 +25,7 @@
                 android:id="@+id/ivicon"
                 android:layout_width="65dp"
                 android:layout_height="65dp"
-                android:src="@drawable/face_pass"
+                android:src="@drawable/icon"
                 android:layout_centerVertical="true"
                 android:layout_margin="33dp"/>
             <LinearLayout
